@@ -1,0 +1,5 @@
+                # RBF kernel: K(xi,xj) = e ( (-|xi-xj|**2) / (2sigma**2)
+                square_dist = squaredDistance(data[i],data[j])
+                base = 2.0 * sigma**2
+                Gram[i][j] = exp(-square_dist/base)
+                Gram[j][i] = Gram[i][j]
